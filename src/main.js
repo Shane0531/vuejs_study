@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import CreateItem from './components/CreateItem.vue';
+import DisplayItem from './components/DisplayItem.vue';
 import VueRouter from 'vue-router';
 import VueAxios from 'vue-axios';
 import axios from 'axios';
@@ -10,9 +11,14 @@ Vue.use(VueAxios, axios);
 const routes = [
   {
         name: 'CreateItem',
-        path: '/',
+        path: '/create/item',
         component: CreateItem
-    }
+  },
+  {
+         name: 'DisplayItem',
+         path: '/',
+         component: DisplayItem
+  }
 ];
 
 const router = new VueRouter({ mode: 'history', routes: routes});
